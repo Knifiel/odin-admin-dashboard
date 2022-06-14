@@ -6,13 +6,10 @@
 
 body, html{
     height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1rem;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -51,13 +48,16 @@ ul, a, h1, li{
     font-weight: bold;
 }
 
-a>img{
-    height: 1rem;
-    width: 1rem;
+.sidebar img{
+    height: 1.6rem;
+    width: 1.6rem;
+    filter: invert();
 }
 
 li{
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
 }
 .sidebar a+a{
     margin-left: 1rem;  
@@ -100,7 +100,7 @@ a:hover{
     align-items: center;
 }
 
-.header .utility-bar img{
+.header input img{
     height: 1rem;
     width: 1rem;
     border-radius: 50%;
@@ -138,7 +138,7 @@ a:hover{
 
 .action-bar{
     display: grid;
-    grid-template-columns: auto 5fr repeat(3, minmax(100px, 1fr));
+    grid-template-columns: auto 10fr repeat(3, minmax(100px, 1fr));
     gap: 1rem;
     align-items: center;
 }
@@ -266,13 +266,9 @@ h2{
 .announcements{
     display: grid;
 
-    max-height: 300px;
-    grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
-
-    gap: 1rem;
+    grid-template-rows: repeat(3, 1fr);
 
     background-color: white;
-
     padding: 1rem;
     box-shadow: var(--shadow);
 }
@@ -280,9 +276,8 @@ h2{
 .announcements>.announcement{
     display: grid;
     grid-template-rows: 1rem 1fr;
-    height: 100px;
-    overflow-y: hidden;
-    padding: 1rem;
+    padding: 0.5rem;
+    max-height: 90px;
 }
 .announcement>h4, .announcement>p{
     font-size: 0.7rem;
@@ -290,8 +285,7 @@ h2{
 
 .announcement>p{
     color: grey;
-    height: 3rem;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .announcements>div:nth-child(n+2){
